@@ -1,3 +1,7 @@
+import 'package:criado_apartir_exemplo_de_rodrigo_rahman_youtube/home/get_connect/get_connect_bindings.dart';
+import 'package:criado_apartir_exemplo_de_rodrigo_rahman_youtube/home/get_connect/get_connect_page.dart';
+import 'package:criado_apartir_exemplo_de_rodrigo_rahman_youtube/home/home_bindings.dart';
+import 'package:criado_apartir_exemplo_de_rodrigo_rahman_youtube/home/http/http_bindings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,12 +18,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(getPages: [
-      GetPage(name: '/', page: () => const HomePage(), children: [
-        GetPage(
-          name: '/http',
-          page: () => const HtttpPage(),
-        ),
-      ]),
+      GetPage(
+        name: '/',
+        page: () => const HomePage(),
+        binding: HomeBindings(),
+        children: [
+          GetPage(
+            name: '/http',
+            page: () => const HtttpPage(),
+            binding: HttpBindings(),
+          ),
+          GetPage(
+            name: '/getConnect',
+            page: () => const GetConnectPage(),
+            binding: GetConnectBindings(),
+          ),
+        ],
+      ),
     ]);
   }
 }

@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Guia acesso API')),
-      body: Container(
+      body: SizedBox(
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () => Get.toNamed('/getConnect'),
                 child: const Text(
                   'GetConnect',
                   style: TextStyle(fontSize: 20),

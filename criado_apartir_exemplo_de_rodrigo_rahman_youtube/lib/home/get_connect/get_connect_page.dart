@@ -1,17 +1,17 @@
-import 'package:criado_apartir_exemplo_de_rodrigo_rahman_youtube/home/http/http_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../model/user_model.dart';
+import 'get_connect_controller.dart';
 
-class HtttpPage extends GetView<HttpController> {
-  const HtttpPage({Key? key}) : super(key: key);
+class GetConnectPage extends GetView<GetConnectController> {
+  const GetConnectPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Http'),
+        title: const Text('GetConnect'),
       ),
       body: controller.obx((state) {
         return ListView.builder(
