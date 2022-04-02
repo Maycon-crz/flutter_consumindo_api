@@ -21,6 +21,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               TextButton(
+                // onPressed: () => Get.toNamed(''),
                 onPressed: () {},
                 child: const Text(
                   'DIO',
